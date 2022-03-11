@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse events </title>
+
+</head>
+<style>
+*{
+  background-color: rgb(104, 104, 218);
+}
+.tex{
+ 
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+}
+.tex1{
+  width: 300px;
+  Height: 300px;
+  
+}
+p{
+  margin: 20px 10px;
+  padding: 10px;
+  border: 2px solid black;
+  background-color: whitesmoke;
+}
+h1{
+  text-align: center;
+  color:white;
+}
+
+</style>
+<body>
+  
+  <div class="tex">
+    <div class="tex1" >
+    <h1>Mouse Up and Mouse Down</h1>
+    <p id="id1" onmousedown="mouseDown()" onmouseup="mouseUp()">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
+    <p id="show1"></p>
+  </div>
+
+  <div class="tex1" >
+    <h1>Mouse Enter and Mouse Leave</h1>
+    <p id="id2" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
+    <p id="show2"></p>
+  </div>
+
+  </div>
+
+  <script>
+// <!-- mouseup and mousedown events -->
+const mouseDown = () =>{
+      document.getElementById('id1').style.color='red';
+      document.getElementById('show1').innerHTML = 'Mouse is down !';
+    }
+    const mouseUp = () =>{
+      document.getElementById('id1').style.color='green';
+      document.getElementById('show1').innerHTML = 'Mouse is up !';
+    }
+
+// mouseenter and mouseleave events
+
+mouseEnter = () =>{
+  document.getElementById('id2').style.backgroundColor='red';
+  document.getElementById('show2').innerHTML="Mouse is inside the box";
+}
+mouseLeave = () =>{
+  document.getElementById('id2').style.backgroundColor='yellow';
+  document.getElementById('show2').innerHTML="Mouse is outside the box";
+}
+
+  </script>
+  
+</body>
+</html>
